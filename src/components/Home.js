@@ -1,4 +1,5 @@
 import React from 'react'
+import NavBar from './NavBar'
 import Carousel from './Carousel'
 import Items from './Items'
 
@@ -6,7 +7,7 @@ export default function Home(){
 
     return(
         <div>
-            You have hit the homepage!
+            <NavBar />
             <Carousel />
             <Items />
         </div>
