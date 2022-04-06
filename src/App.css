@@ -53,3 +53,8 @@
   background-image: url("https://images.unsplash.com/photo-1494302377477-915db5a8e609?");
   background-position: right; 
 }
+
+.icon-box {
+  display: flex;
+  justify-content: space-between;
+}

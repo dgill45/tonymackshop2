@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Items(){
+export default function Item(){
 
     return(
     

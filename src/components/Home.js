@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from './NavBar'
 import Carousel from './Carousel'
-import Items from './Items'
+import Item from './Item'
 
 export default function Home(){
 
