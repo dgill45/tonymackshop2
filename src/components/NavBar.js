@@ -10,7 +10,7 @@ export default function NavBar(){
         <div className="Routes-Nav">
             <header className="header">
                 <div className="nav-logo">
-                    <h3>MobileMack</h3>
+                    <h3>MobileCutz</h3>
 
                 </div>
                 <div className="nav-toggle">
