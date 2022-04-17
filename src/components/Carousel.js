@@ -6,7 +6,6 @@ export default function Carousel(){
 
 
     return(
-            <div className='Routes-Main'>
                 <header
                     className="carousel"
                     >
@@ -21,6 +20,5 @@ export default function Carousel(){
                     </div>
                     <div className="carousel__fadeBottom" />
                 </header>
-            </div>
     )
 }

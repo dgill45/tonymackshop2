@@ -1,44 +1,5 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .header {
-
   display: flex;
   justify-content: space-between;
   padding: 12px;
@@ -78,10 +39,69 @@
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .banner {
+  .carousel {
     height: 768px;
     background-size: cover;
   }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .carousel {
+    height: 100vh;
+  }
+}
+
+.carousel .carousel__contents {
+  margin-left: 30px;
+  padding-top: 140px;
+  height: 306px;
+}
+
+.carousel .carousel__contents .carousel__title {
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .carousel .carousel__contents .carousel__title {
+    height: 400px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .carousel .carousel__contents .carousel__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    text-align: center;
+  }
+}
+
+.carousel .carousel__fadeBottom {
+  height: 7.5rem;
+  background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #1a1a29);
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .carousel .carousel__fadeBottom {
+    height: 28.9rem;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .carousel .carousel__fadeBottom {
+    height: 45rem;
+  }
+}
+
+.header a {
+  text-decoration: none;
+  color: #000;
 }
 
 .header .nav__logo,
@@ -90,4 +110,187 @@
   text-shadow: 2px 10px 5px #42bcf5;
   font-weight: 900;
   font-size: 26px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .header .nav__logo,
+  .header h3 {
+    padding: 0 12px;
+    font-size: 33px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .header .nav__logo,
+  .header h3 {
+    font-size: 26px;
+    padding: 0 6px;
+  }
+}
+
+.header .nav__toggle {
+  cursor: pointer;
+}
+
+.header .nav__toggle button {
+  border: none;
+  background: transparent;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .header .nav__toggle button {
+    border: none;
+    background: transparent;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .header .nav__toggle {
+    cursor: pointer;
+    display: none;
+  }
+}
+.header .nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 5px #000;
+  position: absolute;
+  background: #fff;
+  left: 0;
+  z-index: 99;
+  transform: translateY(-200%);
+  transition: all 0.25s;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .header .nav {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    justify-content: center;
+    transition: all 0.25s;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .header .nav {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    justify-content: center;
+    transition: all 0.25s;
+  }
+}
+
+.header .nav span,
+.header .nav a {
+  padding: 12px 0;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .header .nav span,
+  .header .nav a {
+    padding: 12px 16px;
+  }
+}
+
+.header .nav a:hover {
+  background: #97bf12;
+  color: #fff;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .header .nav a {
+    width: 100%;
+    display: flex;
+    text-align: justify;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .header .nav a {
+    width: 100%;
+    display: flex;
+    text-align: justify;
+    padding: 12px 16px;
+  }
+}
+
+.header .nav .nav__auth,
+.header .nav .nav__items {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .nav .nav__auth.active,
+.header .nav .nav__items.active {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .header .nav .nav__auth,
+  .header .nav .nav__items {
+    transition: all 0.25s;
+    margin: 0 0 0 20px;
+    text-align: justify;
+  }
+}
+
+.header .nav .nav__auth.active {
+  transform: translateY(232%);
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .header .nav .nav__auth {
+    transform: translateY(375%);
+    font-size: 32px;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .header .nav .nav__auth {
+    transform: translateY(485%);
+    font-size: 32px;
+    font-weight: 500;
+  }
+}
+
+.header .nav .nav__items.active {
+  transform: translateY(221%);
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .header .nav .nav__items {
+    transform: translateY(250%);
+    font-size: 23px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .header .nav .nav__items {
+    transform: translateY(300%);
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .header .nav__logo-tab {
+    display: none;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .header .nav__logo-tab {
+    display: none;
+  }
+}
+
+.header .logoutButton {
+  background: #97bf12;
+  color: #fff;
 }
